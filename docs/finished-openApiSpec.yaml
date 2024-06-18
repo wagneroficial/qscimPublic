@@ -1,19 +1,14 @@
 
-openapi: 3.0.2
+openapi: 3.0.0
 info:
   title: finished
   description: SCIM 2.0 finished API. Defines the SCIM 2.0 endpoints exposed for manage users and groups.
   version: 1.0.0
-servers:
-  - url: http://localhost:3000/api/container/8880
-    description: "New Connector: loki Connector"
-security: 
-  - basic: []
 components:
   securitySchemes:
-    basic:
+    basicAuth:
       type: http
-      scheme: basic    
+      scheme: basic
   schemas:
     Users:
       type: object
@@ -268,6 +263,11 @@ components:
         value:
           type: string
           description: DER-encoded X.509 certificate
+security:
+  - basicAuth: []
+servers:
+  - url: http://localhost:3000/api/container/8880
+    description: "New Connector: loki Connector"
 tags:
   - name: users
     description: Users information

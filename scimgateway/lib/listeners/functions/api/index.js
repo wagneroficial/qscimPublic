@@ -1,13 +1,26 @@
 const { formatAuth } = require("../../../utils/formatAuth");
+const { getCacheInfo } = require("../../../utils/getCacheInfo");
 const axios = require("axios");
 
 async function useApiListener(config, auth, endpointMapper, map) {
-  const api = axios.create({
-    baseURL: `http://localhost:${config.port}/${config.path}`,
-    headers: {
-      Authorization: auth,
-    },
-  });
+  const filteredAuth = auth.basic.filter((item) => !item.readOnly)[0];
+
+  if (!filteredAuth) {
+    console.error("No Basic Auth provided for Rest API listener");
+  }
+
+  const token = Buffer.from(
+    `${filteredAuth.username}:${filteredAuth.password}`
+  ).toString("base64");
+
+  // let formattedAuth = formatAuth(
+  //   await getCacheInfo(config.auth, caches, port)
+  // );
+
+  // let headers = {
+  //   Authorization: formattedAuth,
+  //   ...(config.headers || {}),
+  // };
 
   async function makeRequest() {
     try {
@@ -16,9 +29,7 @@ async function useApiListener(config, auth, endpointMapper, map) {
           url: config.url,
           method: config.method,
           headers: {
-            Authorization: (
-              await formatAuth(config.auth, `http://localhost:${config.port}`)
-            ).token,
+            Authorization: formatAuth(config.auth),
             ...config.headers,
           },
           data: config.body,
@@ -36,6 +47,12 @@ async function useApiListener(config, auth, endpointMapper, map) {
 
         if (Object.keys(data).length) {
           let idValue = config.path === "users" ? data.userName : data.id;
+          const api = axios.create({
+            baseURL: `http://localhost:${config.port}/${config.path}`,
+            headers: {
+              Authorization: `Basic ${token}`,
+            },
+          });
 
           await api
             .get(`/${idValue}`)
