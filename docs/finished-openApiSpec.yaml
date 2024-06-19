@@ -6,7 +6,7 @@ info:
   version: 1.0.0
 servers:
   - url: http://localhost:3000/api/container/8880
-    description: "New Connector 5: loki Connector"
+    description: "New Connector 6: loki Connector"
 security: 
   - bearer: []
   - oauth2: []

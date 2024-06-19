@@ -1,1 +1,1 @@
-const lokiNewConnector5 = require('./lib/plugin-loki-new-connector-5')
+const lokiNewConnector6 = require('./lib/plugin-loki-new-connector-6')

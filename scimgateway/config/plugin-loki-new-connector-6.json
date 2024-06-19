@@ -20,7 +20,7 @@
       "basic": [],
       "bearerToken": [
         {
-          "token": "process.env.loki-new-connector-5_BEARER_0_TOKEN",
+          "token": "process.env.loki-new-connector-6_BEARER_0_TOKEN",
           "readOnly": false,
           "baseEntities": []
         }
@@ -45,8 +45,8 @@
       ],
       "bearerOAuth": [
         {
-          "client_id": "process.env.loki-new-connector-5_OAUTH2_1_CLIENT_ID",
-          "client_secret": "process.env.loki-new-connector-5_OAUTH2_1_CLIENT_SECRET",
+          "client_id": "process.env.loki-new-connector-6_OAUTH2_1_CLIENT_ID",
+          "client_secret": "process.env.loki-new-connector-6_OAUTH2_1_CLIENT_SECRET",
           "readOnly": false,
           "baseEntities": []
         }
