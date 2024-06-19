@@ -1,0 +1,51 @@
+{
+  "connectorId": "66725735d2d8b507166b0616",
+  "name": "New Connector 5",
+  "connectors": [
+    {
+      "_id": {
+        "$oid": "66725735d2d8b507166b0616"
+      },
+      "name": "New Connector 5",
+      "description": "A mockup database used for test purposes. This allows easy management of users and groups.",
+      "connector": "loki",
+      "port": 8880,
+      "auth": [
+        {
+          "name": "Bearer Token",
+          "description": "Bearer token user authentication, guaranteeing secure access using a valid token.",
+          "type": "bearer",
+          "details": {
+            "token": "1234"
+          }
+        }
+      ],
+      "workspaceId": "665786bd622e9f465857d9a3",
+      "interceptors": [],
+      "adapters": [],
+      "listeners": [],
+      "positions": {
+        "adapters": {
+          "x": 500,
+          "y": 100
+        },
+        "interceptors": {
+          "x": 500,
+          "y": 200
+        },
+        "listeners": {
+          "x": 500,
+          "y": 0
+        },
+        "authentication": {
+          "x": 500,
+          "y": 300
+        }
+      },
+      "_etag": {
+        "$oid": "66725735d2d8b507166b0615"
+      }
+    }
+  ],
+  "generatedAt": "2024-06-19T03:57:59.838Z"
+}
