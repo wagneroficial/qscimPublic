@@ -22,6 +22,7 @@
   # Copy app to Docker container
   COPY --chown=node:node . .
   
+  EXPOSE 8884
   EXPOSE 8880
 
   
