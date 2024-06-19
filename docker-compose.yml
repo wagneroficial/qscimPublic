@@ -4,12 +4,9 @@ services:
   scimgateway:
     build: ./scimgateway
     ports:
-      - "8886:8886"
       - "8880:8880"
     restart: always
     environment:
-      loki-new-connector_BASIC_0_USERNAME: a
-      loki-new-connector_BASIC_0_PASSWORD: a
       loki-new-connector-6_BEARER_0_TOKEN: 1234
       loki-new-connector-6_OAUTH2_0_CLIENT_ID: null
       loki-new-connector-6_OAUTH2_0_CLIENT_SECRET: null

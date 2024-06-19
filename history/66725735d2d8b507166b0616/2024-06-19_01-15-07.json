@@ -1,52 +1,7 @@
 {
-  "connectorId": "667259a5d2d8b507166b0650",
-  "name": "New Connector",
+  "connectorId": "66725735d2d8b507166b0616",
+  "name": "New Connector 6",
   "connectors": [
-    {
-      "_id": {
-        "$oid": "667259a5d2d8b507166b0650"
-      },
-      "name": "New Connector",
-      "description": "A mockup database used for test purposes. This allows easy management of users and groups.",
-      "connector": "loki",
-      "port": 8886,
-      "auth": [
-        {
-          "name": "Basic Auth",
-          "description": "Basic Auth simplifies user authentication, guaranteeing secure access via username and password credentials.",
-          "type": "basic",
-          "details": {
-            "username": "a",
-            "password": "a"
-          }
-        }
-      ],
-      "workspaceId": "665786bd622e9f465857d9a3",
-      "interceptors": [],
-      "adapters": [],
-      "listeners": [],
-      "positions": {
-        "adapters": {
-          "x": 500,
-          "y": 100
-        },
-        "interceptors": {
-          "x": 500,
-          "y": 200
-        },
-        "listeners": {
-          "x": 500,
-          "y": 0
-        },
-        "authentication": {
-          "x": 500,
-          "y": 300
-        }
-      },
-      "_etag": {
-        "$oid": "667259a5d2d8b507166b064f"
-      }
-    },
     {
       "_id": {
         "$oid": "66725735d2d8b507166b0616"
@@ -101,5 +56,5 @@
       }
     }
   ],
-  "generatedAt": "2024-06-19T04:08:12.352Z"
+  "generatedAt": "2024-06-19T04:15:07.917Z"
 }
