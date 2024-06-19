@@ -9,12 +9,21 @@ servers:
     description: "New Connector 5: loki Connector"
 security: 
   - bearer: []
+  - oauth2: []
 components:
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
-      bearerFormat: JWT    
+      bearerFormat: JWT
+    oauth2:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: /oauth/token
+          scopes:
+            read: Grants read access
+            write: Grants write access    
   schemas:
     Users:
       type: object

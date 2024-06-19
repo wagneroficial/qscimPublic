@@ -43,7 +43,14 @@
           "baseEntities": []
         }
       ],
-      "bearerOAuth": [],
+      "bearerOAuth": [
+        {
+          "client_id": "process.env.loki-new-connector-5_OAUTH2_1_CLIENT_ID",
+          "client_secret": "process.env.loki-new-connector-5_OAUTH2_1_CLIENT_SECRET",
+          "readOnly": false,
+          "baseEntities": []
+        }
+      ],
       "certificate": {
         "key": null,
         "cert": null,
