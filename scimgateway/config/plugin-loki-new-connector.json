@@ -25,7 +25,13 @@
           "baseEntities": []
         }
       ],
-      "bearerToken": [],
+      "bearerToken": [
+        {
+          "token": "process.env.loki-new-connector_BEARER_1_TOKEN",
+          "readOnly": false,
+          "baseEntities": []
+        }
+      ],
       "bearerJwtAzure": [
         {
           "tenantIdGUID": null,

@@ -9,11 +9,16 @@ servers:
     description: "New Connector: loki Connector"
 security: 
   - basic: []
+  - bearer: []
 components:
   securitySchemes:
     basic:
       type: http
-      scheme: basic    
+      scheme: basic
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT    
   schemas:
     Users:
       type: object

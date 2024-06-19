@@ -9,6 +9,9 @@ services:
     environment:
       loki-new-connector_BASIC_0_USERNAME: a
       loki-new-connector_BASIC_0_PASSWORD: a
+      loki-new-connector_BEARER_1_TOKEN: aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      loki-new-connector_OAUTH2_1_CLIENT_ID: null
+      loki-new-connector_OAUTH2_1_CLIENT_SECRET: null
 
     volumes:
       - data:/home/node/app/data
