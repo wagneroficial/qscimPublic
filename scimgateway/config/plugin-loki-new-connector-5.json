@@ -1,6 +1,6 @@
 {
   "scimgateway": {
-    "port": 8881,
+    "port": 8880,
     "localhostonly": false,
     "payloadSize": null,
     "scim": {
@@ -17,15 +17,14 @@
       "customMasking": null
     },
     "auth": {
-      "basic": [
+      "basic": [],
+      "bearerToken": [
         {
-          "username": "process.env.loki-new-connector---test_BASIC_0_USERNAME",
-          "password": "process.env.loki-new-connector---test_BASIC_0_PASSWORD",
+          "token": "process.env.loki-new-connector-5_BEARER_0_TOKEN",
           "readOnly": false,
           "baseEntities": []
         }
       ],
-      "bearerToken": [],
       "bearerJwtAzure": [
         {
           "tenantIdGUID": null,

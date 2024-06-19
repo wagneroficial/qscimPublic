@@ -5,15 +5,16 @@ info:
   description: SCIM 2.0 finished API. Defines the SCIM 2.0 endpoints exposed for manage users and groups.
   version: 1.0.0
 servers:
-  - url: http://localhost:3000/api/container/8881
-    description: "New Connector - test: loki Connector"
+  - url: http://localhost:3000/api/container/8880
+    description: "New Connector 5: loki Connector"
 security: 
-  - basic: []
+  - bearer: []
 components:
   securitySchemes:
-    basic:
+    bearerAuth:
       type: http
-      scheme: basic    
+      scheme: bearer
+      bearerFormat: JWT    
   schemas:
     Users:
       type: object
