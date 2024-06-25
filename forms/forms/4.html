@@ -1,11 +1,11 @@
 <!DOCTYPE html>
     <html>
       <head>
-        <title>Form - My form 12345667</title>
+        <title>Form - My form</title>
         <link rel="stylesheet" href="../styles.css" />
         
     <style>
-      .card_form[data-form="2"] {
+      .card_form[data-form="4"] {
         background-color: #90a2d6;
       }
     </style>
@@ -13,24 +13,32 @@
       </head>
       <body>
         <div class="page_container">
-          <div class="card_form" data-form="2">
+          <div class="card_form" data-form="4">
             <form class="form_container" id="form">
-              <div class="content_input" style="text-align: center;">
-    <h2>My title</h2>
-        <p></p>
-    </div> <div class="content_input" style="text-align: right;">
-    <h2>My image</h2>
-        <img src= alt="image"/>
+              <div class="form_input">
+    <div class="input_custom">
+
+    
+    <p>Name</p>
+        <input id="input_userName"  />
+    </div>
+    </div> <div class="form_input">
+    <div class="input_custom">
+
+    
+    <p>Age</p>
+        <input id="input_age" type="number"  />
+    </div>
     </div>
               <div class="message-container" id="messageContainer"></div>
               <div class="button_customer"> 
-                <button type="submit" id="submit_btn"  class="submit-btn">Submit</button>
+                <button type="submit" id="submit_btn" disabled class="submit-btn">:/</button>
               </div>
             </form>
           </div>
         </div>
         <script src="../scripts.js"></script>
-        <script src="./2.js"></script>
+        <script src="./4.js"></script>
       </body>
     </html>
   
